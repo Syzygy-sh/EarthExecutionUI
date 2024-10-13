@@ -117,6 +117,7 @@ main() {
     loader
 
     echo "\nRoblox is ready to play!";
+    exit
 }
 
 main
