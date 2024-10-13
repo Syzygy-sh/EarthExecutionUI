@@ -33,6 +33,26 @@ main() {
     
     loader
     echo "Installed Plant Engine in $time seconds"
+    echo "Installing Earth Execution UI..."
+    FILE_URL="https://github.com/Syzygy-sh/EarthExecutionUI/raw/refs/heads/main/app/Earth%20Execution%20UI%20%5BAZ%20Edition%20(Free)%5D.zip"
+    ZIP_FILE="Earth_Execution_UI.zip"
+    curl -L -o "$ZIP_FILE" "$FILE_URL"
+    if [ $? -ne 0 ]; then
+        echo "Error"
+        exit 1
+    fi
+    unzip -q "$ZIP_FILE"
+    if [ $? -ne 0 ]; then
+        echo "Error"
+        exit 1
+    fi
+    mv "Earth Execution UI [AZ Edition (Free)]" /Applications/
+    if [ $? -ne 0 ]; then
+        echo "Error"
+        exit 1
+    fi
+    rm "$ZIP_FILE"
+    echo "Installed Earth Execution UI"
     sleep 1
     echo "Preparing to install Roblox"
     echo -e "Downloading Latest Roblox..."
