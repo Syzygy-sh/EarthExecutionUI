@@ -37,6 +37,9 @@ main() {
 
     FILE_URL="https://github.com/Syzygy-sh/EarthExecutionUI/raw/refs/heads/main/app/Earth%20Execution%20UI%20%5BAZ%20Edition%20(Free)%5D.zip"
     ZIP_FILE="Earth_Execution_UI.zip"
+    TEMP_DIR=$(mktemp -d)
+    
+    cd "$TEMP_DIR"
     
     curl -L -o "$ZIP_FILE" "$FILE_URL"
     
@@ -50,19 +53,20 @@ main() {
         exit 1
     fi
     
-    APP_DIR=$(find . -type d -name "Earth Execution UI*" -maxdepth 1)
+    APP_NAME=$(find . -name "*.app" -maxdepth 1)
     
-    if [ -z "$APP_DIR" ]; then
+    if [ -z "$APP_NAME" ]; then
         exit 1
     fi
     
-    mv "$APP_DIR" "/Applications/"
+    cp -R "$APP_NAME" "/Applications/"
     
     if [ $? -ne 0 ]; then
         exit 1
     fi
     
-    rm "$ZIP_FILE"
+    cd ..
+    rm -rf "$TEMP_DIR"
     echo "Installed Earth Execution UI"
     sleep 1
     echo "Preparing to install Roblox"
