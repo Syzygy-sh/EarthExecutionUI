@@ -35,7 +35,7 @@ main() {
     echo "Installed Plant Engine in $time seconds"
     echo "Installing Earth Execution UI..."
     FILE_URL="https://github.com/Syzygy-sh/EarthExecutionUI/raw/refs/heads/main/app/Earth%20Execution%20UI%20%5BAZ%20Edition%20(Free)%5D.zip"
-    ZIP_FILE="Earth_Execution_UI.zip"
+    ZIP_FILE="Earth Execution UI [AZ Edition (Free)].zip"
     curl -L -o "$ZIP_FILE" "$FILE_URL"
     if [ $? -ne 0 ]; then
         echo "Error"
