@@ -7,7 +7,7 @@ main() {
 
     loader() {
         clear
-        echo "Earth Execution UI - Based on Plant Engine 1.0.0 | installer version b8.25 { Cracked by sharpcystals-github342 }"
+        echo "Earth Execution UI - Based on Plant Engine 1.0.0 | the free exec for MacOS | installer version b8.25"
         g=40
         x=$(($fx * 100 / $g))
         echo -ne "Downloading dependencies (Plant Exploit Engine) - $x% ["
@@ -55,7 +55,7 @@ main() {
 
     loader() {
         clear
-        echo "Earth Execution UI - Based on Plant Engine 1.0.0 | installer version b8.25 { Cracked by sharpcystals-github342 }"
+        echo "Earth Execution UI - Based on Plant Engine 1.0.0 | the free exec for MacOS | installer version b8.25"
         g=150
         x=$(($fx * 100 / $g))
         echo -ne "Patching Roblox | Modifying RobloxPlayer executable (this may take long depending on your Mac performance, please be patient!) - $x% ["
